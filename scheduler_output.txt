@@ -1,0 +1,148 @@
+Task Info:
+Number of jobs: 9
+Total Burst Time: 39
+Min Burst Time: 2
+Max Burst Time: 10
+Average Burst Time: 4.33
+Standard Deviation: 2.87
+
+Round Robin
+Round Robin Scheduler:
+Quantum: 4
+Context Switch Time: 1
+Total runtime: 51.00
+Average Turnaround Time: 31.33
+Average Wait Time: 27.00
+Average Response Time: 19.67
+Total Context Switches: 12
+
+FCFS
+First Come First Serve Scheduler:
+Context Switch Time: 1
+Total runtime: 47.00
+Average Turnaround Time: 24.89
+Average Wait Time: 20.56
+Average Response Time: 20.56
+Total Context Switches: 8
+
+SJF
+Shortest Job First Scheduler:
+Context Switch Time: 1
+Total runtime: 47.00
+Average Turnaround Time: 22.56
+Average Wait Time: 18.22
+Average Response Time: 18.22
+Total Context Switches: 8
+
+========================================
+Task Info:
+Number of jobs: 8
+Total Burst Time: 274
+Min Burst Time: 4
+Max Burst Time: 64
+Average Burst Time: 34.25
+Standard Deviation: 25.66
+
+Round Robin
+Round Robin Scheduler:
+Quantum: 4
+Context Switch Time: 1
+Total runtime: 327.00
+Average Turnaround Time: 124.62
+Average Wait Time: 90.38
+Average Response Time: 6.12
+Total Context Switches: 53
+
+FCFS
+First Come First Serve Scheduler:
+Context Switch Time: 1
+Total runtime: 281.00
+Average Turnaround Time: 75.38
+Average Wait Time: 41.12
+Average Response Time: 41.12
+Total Context Switches: 7
+
+SJF
+Shortest Job First Scheduler:
+Context Switch Time: 1
+Total runtime: 281.00
+Average Turnaround Time: 73.25
+Average Wait Time: 39.00
+Average Response Time: 39.00
+Total Context Switches: 7
+
+========================================
+Task Info:
+Number of jobs: 6
+Total Burst Time: 5700
+Min Burst Time: 100
+Max Burst Time: 3000
+Average Burst Time: 950.00
+Standard Deviation: 1243.78
+
+Round Robin
+Round Robin Scheduler:
+Quantum: 4
+Context Switch Time: 1
+Total runtime: 6875.00
+Average Turnaround Time: 2673.67
+Average Wait Time: 1723.67
+Average Response Time: 866.50
+Total Context Switches: 1175
+
+FCFS
+First Come First Serve Scheduler:
+Context Switch Time: 1
+Total runtime: 5705.00
+Average Turnaround Time: 2365.33
+Average Wait Time: 1415.33
+Average Response Time: 1415.33
+Total Context Switches: 5
+
+SJF
+Shortest Job First Scheduler:
+Context Switch Time: 1
+Total runtime: 5705.00
+Average Turnaround Time: 1751.17
+Average Wait Time: 801.17
+Average Response Time: 801.17
+Total Context Switches: 5
+
+========================================
+Task Info:
+Number of jobs: 9
+Total Burst Time: 19051
+Min Burst Time: 1
+Max Burst Time: 10000
+Average Burst Time: 2116.78
+Standard Deviation: 4193.36
+
+Round Robin
+Round Robin Scheduler:
+Quantum: 4
+Context Switch Time: 1
+Total runtime: 23566.00
+Average Turnaround Time: 5165.22
+Average Wait Time: 3048.44
+Average Response Time: 14.56
+Total Context Switches: 4515
+
+FCFS
+First Come First Serve Scheduler:
+Context Switch Time: 1
+Total runtime: 19059.00
+Average Turnaround Time: 15797.00
+Average Wait Time: 13680.22
+Average Response Time: 13680.22
+Total Context Switches: 8
+
+SJF
+Shortest Job First Scheduler:
+Context Switch Time: 1
+Total runtime: 19059.00
+Average Turnaround Time: 3143.00
+Average Wait Time: 1026.22
+Average Response Time: 1026.22
+Total Context Switches: 8
+
+========================================
