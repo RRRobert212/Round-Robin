@@ -128,21 +128,26 @@ def SJF_NonPremptive(tasks, contextSwitchTime):
     first_task = True
 
 
+    #this is a little convulted, completed could just be an int, but I did it this way because my structure was different originally and it's an artifact of that
     while (len(completed) < len(tasks)):
         for i in range(len(burst_times)):
             if (arrival_times[i] <= time and burst_times[i] > 0 and i not in ready_queue):
+                #ready queue is a list of indeces of burst_times that are ready to go
                 ready_queue.append(i)
 
+        #sort the ready_queue by burst time
         ready_queue.sort(key = lambda k: burst_times[k])
         if len(ready_queue) > 0:
             index = ready_queue.pop(0)
 
+            #first task doesn't count context switches
             if not first_task:
                 totalSwitches += 1
                 time += contextSwitchTime
                 totalRuntime += contextSwitchTime
             else: first_task = False
 
+            #if response time hasn't been updated, it's its first time on the CPU, so set response time
             if responseTimes[index] == 0:
                 responseTimes[index] = time - arrival_times[index]
 
@@ -151,7 +156,11 @@ def SJF_NonPremptive(tasks, contextSwitchTime):
             burst_times[index] = 0
 
             turnAroundTimes[index] = time - arrival_times[index]
+            #wait time should equal response time, and it does, sign that this is working correctly.
             waitTimes[index] = turnAroundTimes[index] - initial_bursts[index]
+
+            #sort of a ridiculous way to track if we've done them all, appending True to a list and then just checking the length of the list lol
+            #this could be an int, but whatever, it works.
             completed.append(True)
 
 
@@ -168,7 +177,7 @@ def SJF_NonPremptive(tasks, contextSwitchTime):
 
 
 
-#output functions, change to write to file?
+#output functions
 def round_robin_output(quantum, contextSwitchTime, totalRuntime, avgTurnAround, avgWait, avgResponse, totalSwitches, file):
     file.write(f"Round Robin Scheduler:\nQuantum: {quantum}\nContext Switch Time: {contextSwitchTime}\n")    
     file.write(f"Total runtime: {totalRuntime:.2f}\nAverage Turnaround Time: {avgTurnAround:.2f}\nAverage Wait Time: {avgWait:.2f}\nAverage Response Time: {avgResponse:.2f}\nTotal Context Switches: {totalSwitches}\n")
