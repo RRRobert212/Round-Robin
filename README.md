@@ -4,9 +4,10 @@ Given a list containing tuples of burst times and arrival times, this program wi
 
 To execute the program with the given example in main, just run main.py. Or, adjust the task list. and function parameters as desired.
 
-An example of 4 task lists are given in the main function, but new task lists can be created by the user and tested. Just enter an array of tuples where array[i[0]] is burst time of task i and array[i[1]] is the arrival time of task i.
+Note that to get output from the functions, you have to run the output functions with the scheduler functions as an unpacked parameter.
+E.G.: round_robin_output(*round_robin(taskList, 5, 1), file) where taskList is your array of tasks (burst times and arrival times), 5 is your quantum, and 1 is your context switch time. (leave file as 'file' if you want to output to scheduler_output.txt). Adjust the quantum and context switch time as needed.
 
-Quantum and time for context switch are also adjustable as parameters of each function. In the example, quantum = 4, and context switch time = 1 for all schedulers. 
+An example of 4 task lists are given in the main function, but new task lists can be created by the user and tested. Just enter an array of tuples where array[i[0]] is burst time of task i and array[i[1]] is the arrival time of task i. Then either replace the tasks in tasks_list with this array or add it as an additional list. The schedulers will loop through every task list in the tasks_list array and provide output for all of them.
 
 Adjusting these values gives insight into the advantages and disadvantages of each scheduler. For example, a high context switch time and a high quantum makes Round Robin very inefficient. However, a low quantum gives it a very low response time compared to other algorithms, which is a positive.
 
